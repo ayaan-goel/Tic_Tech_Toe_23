@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Smart Center</title>
+    <link rel="stylesheet" type="text/css" href="ssc.css">
+    <link rel="icon" href="FAVICON2.ICO" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome CSS -->
+    <style>
+
+        
+        /* Set the background to a study-themed image */
+        body {
+            background-image: url('study-background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        
+/* Style for the guidance item headings */
+.guidance-item h3 {
+    font-size: 16px; /* Adjust the size of the heading */
+    margin-bottom: 10px; /* Add spacing below the heading */
+    position: relative; /* Set the heading position to relative */
+}
+
+/* Insert bullet using a ::before pseudo-element */
+.guidance-item h3::before {
+    content: "\2022"; /* Unicode bullet character */
+    font-size: 18px; /* Adjust the size of the bullet point */
+    margin-right: 10px; /* Add spacing between the bullet and the heading */
+    color: #ffffff; /* Change the color of the bullet point */
+    position: absolute; /* Set the bullet position to absolute */
+    left: -10px; /* Adjust the distance between the bullet and the heading */
+    top: 50%; /* Vertically center the bullet */
+    transform: translateY(-50%); /* Adjust the vertical position of the bullet */
+}
+
+/* Style for the guidance item content (unordered list) */
+.guidance-item ul {
+    list-style-type: none; /* Remove default list bullets */
+    margin-left: 30px; /* Add some indentation for the list items */
+}
+
+
+
+
+
+/* Style for the guidance item content (unordered list) */
+.guidance-item ul {
+    list-style-type: disc; /* Use bullet points for the list */
+    margin-left: 30px; /* Add some indentation for the list items */
+}
+
+
+
+        /* CSS for center-aligning the header text */
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for header */
+        }
+        
+        .about-section {
+            text-align: center;
+        }
+        .about-section p {
+    font-size: 20px; /* Replace with your desired font size for p */
+            font-weight: bold;
+    /* You can also specify other font properties like font-family and font-size here */
+
+}
+        /* Styling for the footer */
+        footer {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for footer */
+            padding: 10px;
+        }
+        
+        /* CSS for the header bar with links */
+        .header-bar {
+            background-color: #333; /* Dark background color for the header bar */
+            color: #fff; /* Text color for the links */
+            text-align: center;
+            position: fixed; /* Fix the header bar at the top */
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .header-bar a {
+            text-decoration: none;
+            color: #fff; /* Text color for the links */
+            margin: 0 20px; /* Add spacing between the links */
+            cursor: pointer; /* Change the cursor to a pointer on hover */
+        }
+
+        /* Add a smooth scrolling behavior to anchor links */
+        .header-bar a[href^="#"] {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .header-bar a[href^="#"]:hover {
+            background-color: #555; /* Darker background color on hover */
+        }
+
+        /* Style the active link */
+        .header-bar a.active {
+            background-color: #555; /* Darker background color for the active link */
+        }
+
+        /* Style icons */
+        .fa-2x {
+            font-size: 2em;
+            margin-right: 10px;
+        }
+        /* Box around "Resources" section */
+.resources-section {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: rgba(212, 218, 237, 0.8); /* Semi-transparent white background for insights section */
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
+    color: #000; /* Change font color to black */
+    font-family: Arial, sans-serif; /* Adjust font family */
+    font-size: 16px; /* Adjust font size */
+    line-height: 1.5; /* Adjust line height */
+}
+
+/* Styling for the course list */
+.resources-box ul.course-list {
+    list-style: none;
+    padding: 0;
+}
+
+.resources-box ul.course-list li {
+    margin-bottom: 10px;
+}
+
+.resources-box ul.course-list li a {
+    text-decoration: none;
+    color: #333; /* Text color for course links */
+    font-weight: bold;
+}
+
+.resources-box ul.course-list li a:hover {
+    color: #fff9f9; /* Text color for course links on hover */
+}
+
+
+        /* Box around "College Student Guidance" section */
+        .guidance-section {
+            border: 1px solid #000000;
+            padding: 20px;
+            background-color: rgba(70, 72, 79, 0.829); /* Semi-transparent white background for guidance section */
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(16, 0, 0, 0.833); /* Add a shadow effect */
+        }
+         /* Style the container div for the "About Us" section */
+.about-section {
+    border: 1px solid #000000;
+            padding: 20px;
+            background-color: rgba(70, 72, 79, 0.829); /* Semi-transparent white background for guidance section */
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(16, 0, 0, 0.833); /* Add a shadow effect */
+        }
+
+        /* Styling for the footer */
+        footer {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for footer */
+            padding: 10px;
+        }
+
+        /* Footer links */
+        .footer-menu {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-menu li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .footer-menu a {
+            text-decoration: none;
+            color: #fff;
+        }
+        /* Box around "Insights" section */
+/* Box around "Insights" section */
+.insights-section {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: rgba(212, 218, 237, 0.8); /* Semi-transparent white background for insights section */
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
+    color: #000; /* Change font color to black */
+    font-family: Arial, sans-serif; /* Adjust font family */
+    font-size: 16px; /* Adjust font size */
+    line-height: 1.5; /* Adjust line height */
+}
+
+/* Styling for the list items inside the "Insights" section */
+.insights-section ul {
+    list-style: disc inside;
+    margin-left: 20px;
+}
+
+.insights-section ul li {
+    margin-bottom: 10px;
+}
+
+
+
+    </style>
+</head>
+<body class="theme-dark">
+    <header>
+        <h1 class="site-title">Study Smart Center</h1>
+        <nav>
+            <ul class="nav-menu">
+               
+                <li><a href="#Resources"><i class="fas fa-book fa-2x"></i>Resources</a></li>
+                <li><a href="#guidance"><i class="fas fa-lightbulb fa-2x"></i> Guidance</a></li>
+                <li><a href="#insights"><i class="fas fa-chart-line fa-2x"></i> Insights</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="about" class="about-section">
+            <div class="section-box"> <!-- Add a container div for the box -->
+              
+                <h2></h2>
+                <p>Welcome to Study Smart Center! </p>    
+                <p> We are dedicated to helping you achieve your academic goals through our high-quality Resources, Guidance and Insights.</p>
+            </div>
+        </section>
+
+        <section id="Resources" class="resources-section">
+            <i class="fas fa-book fa-2x"></i>
+            <h2>Resources</h2>
+            <div class="resources-box">
+                <ul class="course-list">
+                    <li><a href="https://drive.google.com/drive/folders/1kzz8pxpkQe-LDiU3SgI8oX7BHkmOVA9W?usp=sharing">Basic Electronics</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/1uHj7F8sLoCaLUiD4tHSC2LjgUWZ7ji37?usp=sharing">Communication Skills</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/1EBy0287y1IEQmo3FxUyCJT9Yno_5zhRD?usp=sharing">Elements Of Civil Engineering And Solid Mechanics</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/18NSFZaXtv2ka2v7PZIZZNzhMMvPu4mwe?usp=sharing">Elements Of Electrical Engineering</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/1trGQlqZlougTuYI7tVXVAoO6g8TiHS9C?usp=sharing">Elements Of Mechanical Engineering</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/10UisHuDhKsSj7o68kbkd0Vr6h67_CqYp?usp=sharing">Engineering Chemistry</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/10UNw9Ja-NH3kuhkLBurcNscHQmuL-6qO?usp=sharing">Engineering Graphics</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/1vQtSIDmAeEH9m9SEM3Wb1U842e8FV1B0?usp=sharing">Engineering Physics</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/1bvR2xJ7gSdPx3Mjub2CbuNZg4SNU8ukP?usp=sharing">Environmental Studies</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/10e_3xq-hhNoczjG-4iiTvShaL6mJMPn4?usp=sharing">Mathematics-I</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/1-3b1uuPS-P45htURa6Gx_ZHWe2S4v3DV?usp=sharing">Mathematics-II</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/1LETInbkV-6SvSWUjQF4AC8PV-tKljvDb?usp=sharing">Professional Ethics And Human Values</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/1QN0bCIQiBUQjSBvkU4R7BGydrCDjUGL8?usp=sharing">Programming With C</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/1CEHIjjBWMW1VyfKk7Z0GOld6vljc_qMP?usp=sharing">Python Programming</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/1xDrloU9-pIVyWM3cwPIg5Z4AMeodn5mK?usp=sharing">Workshop</a></li>
+                    <!-- Add more course links as needed -->
+                </ul>
+            </div>
+        </section>
+        
+                    <!-- Add more course links as needed -->
+                </ul>
+            </section>
+        </section>
+
+        <section id="guidance" class="guidance-section">
+            <i class="fas fa-lightbulb fa-2x"></i>
+            <h2 class="section-title">Guidance</h2>
+           
+            <div class="guidance-item">
+                <h3>Welcome to College</h3>
+                <ul>
+                    <li>Starting your engineering journey is an exciting step.</li>
+                    <li>Embrace the opportunities and challenges ahead.</li>
+                    <li>Make the most of your time in college.</li>
+                </ul>
+            </div>
+            
+            <div class="guidance-item">
+                <h3>Academic Success</h3>
+                <ul>
+                    <li>College-level academics can be challenging.</li>
+                    <li>Develop effective study habits and time management skills.</li>
+                    <li>Learn strategies for acing your courses.</li>
+                </ul>
+            </div>
+            
+            <div class="guidance-item">
+                <h3>Time Management</h3>
+                <ul>
+                    <li>Effective time management is crucial for success.</li>
+                    <li>Prioritize tasks and create a study schedule.</li>
+                    <li>Avoid procrastination to stay on top of your coursework.</li>
+                </ul>
+            </div>
+            
+            <div class="guidance-item">
+                <h3>Course Selection</h3>
+                <ul>
+                    <li>Choose your courses wisely.</li>
+                    <li>Consult with advisors to plan your academic journey.</li>
+                    <li>Understand prerequisites and create a balanced schedule.</li>
+                </ul>
+            </div>
+            
+            <div class="guidance-item">
+                <h3>Study Strategies</h3>
+                <ul>
+                    <li>Experiment with various study techniques.</li>
+                    <li>Find what works best for you in terms of note-taking, active learning, or group study.</li>
+                </ul>
+            </div>
+            
+            <div class="guidance-item">
+                <h3>Exams and Assessments</h3>
+                <ul>
+                    <li>Prepare thoroughly for exams and assessments.</li>
+                    <li>Develop study plans and practice with past papers.</li>
+                    <li>Manage test anxiety through relaxation techniques.</li>
+                </ul>
+            </div>
+            
+            <div class="guidance-item">
+                <h3>Campus Resources</h3>
+                <ul>
+                    <li>Explore the resources available on campus, including libraries and academic support services.</li>
+                    <li>Utilize them to enhance your learning experience.</li>
+                </ul>
+            </div>
+            
+            <div class="guidance-item">
+                <h3>Networking and Involvement</h3>
+                <ul>
+                    <li>Get involved in engineering-related student organizations and networking events.</li>
+                    <li>Build connections and explore career opportunities.</li>
+                </ul>
+            </div>
+            
+            <div class="guidance-item">
+                <h3>Health and Well-being</h3>
+                <ul>
+                    <li>Take care of your physical and mental health.</li>
+                    <li>Balance academics with self-care and stress management.</li>
+                </ul>
+            </div>
+            
+            <div class="guidance-item">
+                <h3>Career Planning</h3>
+                <ul>
+                    <li>Start planning your career early.</li>
+                    <li>Explore internships, co-op opportunities, and resume building.</li>
+                </ul>
+            </div>
+            
+            <div class="guidance-item">
+                <h3>Financial Management</h3>
+                <ul>
+                    <li>Manage your finances wisely with budgeting and financial aid options.</li>
+                </ul>
+            </div>
+            
+            <div class="guidance-item">
+                <h3>Work-Life Balance</h3>
+                <ul>
+                    <li>Maintain a healthy balance between academics and personal life.</li>
+                    <li>Engage in extracurricular activities and practice time management.</li>
+                </ul>
+            </div>
+            
+            <div class="guidance-item">
+                <h3>Building Relationships</h3>
+                <ul>
+                    <li>Forge meaningful connections with professors and peers.</li>
+                    <li>Collaborate effectively on group projects and seek out mentors.</li>
+                </ul>
+            </div>
+            
+            <div class="guidance-item">
+                <h3>Goal Setting</h3>
+                <ul>
+                    <li>Set both short-term and long-term academic goals.</li>
+                    <li>Regularly review and adjust your goals as you progress through your program.</li>
+                </ul>
+            </div>
+            
+            <div class="guidance-item">
+                <h3>Self-Care and Stress Management</h3>
+                <ul>
+                    <li>Identify stressors and practice healthy stress management techniques.</li>
+                    <li>Engage in physical activity and relaxation exercises.</li>
+                </ul>
+            </div>
+            
+            <div class="guidance-item">
+                <h3>Resilience and Persistence</h3>
+                <ul>
+                    <li>Understand that setbacks are part of the learning process.</li>
+                    <li>Stay determined and persevere through challenges.</li>
+                </ul>
+            </div>
+            
+            <div class="guidance-item">
+                <h3>Exploration and Curiosity</h3>
+                <ul>
+                    <li>Explore different engineering disciplines to discover your interests.</li>
+                    <li>Attend seminars and workshops to expand your knowledge.</li>
+                </ul>
+            </div>
+            
+            <div class="guidance-item">
+                <h3>Feedback and Improvement</h3>
+                <ul>
+                    <li>Be open to feedback from professors and peers.</li>
+                    <li>Use constructive criticism as a tool for improvement.</li>
+                </ul>
+            </div>
+            
+            <div class="guidance-item">
+                <h3>Safety and Campus Policies</h3>
+                <ul>
+                    <li>Familiarize yourself with campus safety guidelines and uphold academic integrity.</li>
+                </ul>
+            </div>
+            
+            <div class="guidance-item">
+                <h3>Seeking Help</h3>
+                <ul>
+                    <li>Seek help when needed from professors, advisors, or counseling services.</li>
+                </ul>
+            </div>
+            
+            
+            
+        
+            <!-- Add more guidance items as needed -->
+        </section>
+      
+
+        <section id="insights" class="insights-section">
+            <i class="fas fa-chart-line fa-2x"></i>
+            <h2>Insights</h2>
+            <section>
+              <h3>Here are some insights to help you succeed in your first year:</h3>
+                <ul>
+                    <li>Attend orientation programs to get familiar with your college and course.</li>
+                    <li>Stay organized with a planner or digital calendar for assignments and deadlines.</li>
+                    <li>Join study groups to collaborate with classmates and enhance your learning.</li>
+                    <li>Visit professors during office hours if you need academic assistance.</li>
+                    <li>Participate in extracurricular activities to develop new skills and make friends.</li>
+                </ul>
+            </section>
+        </section>
+        
+        <section id="feedback" style="text-align: center;">
+            <h2>Feedback</h2>
+            <form id="feedback-form" style="display: inline-block;">
+                <p>How would you rate your experience on our website?</p>
+                <div class="rating-options">
+                    <label>
+                        <input type="radio" name="rating" value="1"> 1
+                    </label>
+                    <label>
+                        <input type="radio" name="rating" value="2"> 2
+                    </label>
+                    <label>
+                        <input type="radio" name="rating" value="3"> 3
+                    </label>
+                    <label>
+                        <input type="radio" name="rating" value="4"> 4
+                    </label>
+                    <label>
+                        <input type="radio" name="rating" value="5"> 5
+                    </label>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        
+    </main>
+
+    <footer>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const feedbackForm = document.getElementById('feedback-form');
+        
+                feedbackForm.addEventListener('submit', function(event) {
+                    event.preventDefault();
+        
+                    const selectedRating = document.querySelector('input[name="rating"]:checked');
+        
+                    if (selectedRating) {
+                        const ratingValue = selectedRating.value;
+                        alert(`Thank you for your feedback! You rated us ${ratingValue}/5.`);
+                    } else {
+                        alert('Please select a rating before submitting.');
+                    }
+                });
+            });
+        </script>
+        
+        <script>
+            // JavaScript to handle smooth scrolling when clicking on header links
+            const headerLinks = document.querySelectorAll('.header-bar a');
+    
+            headerLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+    
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop,
+                            behavior: 'smooth'
+                        });
+    
+                        // Set the "active" class for the clicked link
+                        headerLinks.forEach(link => link.classList.remove('active'));
+                        this.classList.add('active');
+                    }
+                });
+            });
+        </script>
+
+        <p>&copy; 2023 Study Smart Center</p>
+        <nav>
+            <ul class="footer-menu">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
